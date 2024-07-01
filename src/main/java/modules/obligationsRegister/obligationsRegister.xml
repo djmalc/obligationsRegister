@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns="http://www.skyve.org/xml/module" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" title="obligationsRegister" prototype="true" name="obligationsRegister" xsi:schemaLocation="http://www.skyve.org/xml/module ../../schemas/module.xsd">
+    <homeRef>list</homeRef>
+    <homeDocument>Obligations</homeDocument>
+    <documents>
+        <document ref="Obligations"/>
+    </documents>
+    <roles>
+        <role name="Viewer">
+            <description><![CDATA[Enough privileges to view obligationsRegister documents.]]></description>
+            <privileges>
+                <document name="Obligations" permission="_R__C"/>
+            </privileges>
+            <accesses/>
+        </role>
+        <role name="Maintainer">
+            <description><![CDATA[Enough privileges to create and edit obligationsRegister documents.]]></description>
+            <privileges>
+                <document name="Obligations" permission="CRUDC"/>
+            </privileges>
+            <accesses/>
+        </role>
+    </roles>
+    <menu>
+        <list document="Obligations" name="Obligations">
+            <role name="Maintainer"/>
+            <role name="Viewer"/>
+        </list>
+    </menu>
+</module>

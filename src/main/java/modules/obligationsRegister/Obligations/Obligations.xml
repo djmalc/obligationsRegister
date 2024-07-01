@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://www.skyve.org/xml/document" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Obligations" xsi:schemaLocation="http://www.skyve.org/xml/document ../../../schemas/document.xsd">
+    <persistent name="OBL_Obligations"/>
+    <singularAlias>Obligation</singularAlias>
+    <pluralAlias>Obligations</pluralAlias>
+    <iconStyleClass>fa fa-fa fa-fa-solid fa-gear</iconStyleClass>
+    <bizKey expression="Obligation - {reference}"/>
+    <attributes>
+        <text required="true" name="reference">
+            <displayName>Reference</displayName>
+            <length>100</length>
+        </text>
+        <text name="relevantCircumstance">
+            <displayName>Relevant Circumstance</displayName>
+            <length>200</length>
+        </text>
+        <text name="obligation">
+            <displayName>Obligation</displayName>
+            <length>200</length>
+        </text>
+        <enum required="true" name="likelihoodEnlivened">
+            <displayName>Likelihood Enlivened</displayName>
+            <values>
+                <value code="High"/>
+                <value code="Low"/>
+            </values>
+        </enum>
+        <enum required="true" name="obligationEnlivened">
+            <displayName>Obligation Enlivened</displayName>
+            <values>
+                <value code="Enlivened"/>
+                <value code="Not Enlivened"/>
+            </values>
+        </enum>
+        <enum required="true" name="compliant">
+            <displayName>Compliant</displayName>
+            <values>
+                <value code="Compliant"/>
+                <value code="N/A"/>
+            </values>
+        </enum>
+        <text name="control">
+            <displayName>Control</displayName>
+            <length>500</length>
+        </text>
+        <enum required="true" name="responsibleTeam">
+            <displayName>Responsible Team</displayName>
+            <values>
+                <value code="All"/>
+                <value code="Data Analytics / Claims"/>
+                <value code="Performance"/>
+                <value code="Policy"/>
+                <value code="Premiums &amp; Finance"/>
+                <value code="Scheme Compliance"/>
+                <value code="Information Systems"/>
+                <value code="Policy / Communications"/>
+            </values>
+        </enum>
+        <text name="comment">
+            <displayName>Comment</displayName>
+            <length>500</length>
+        </text>
+    </attributes>
+</document>
